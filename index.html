@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown AI Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Adicionando o Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Adicionando a fonte Exo 2 do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="particles"></div>
+    <!-- Botão "Sobre" no canto superior direito -->
+    <button class="info-btn" onclick="openInfoModal()"><i class="fas fa-info-circle"></i> Sobre</button>
+    <h1 class="main-title">Markdown AI Editor</h1>
+    <div class="container">
+        <div class="input-area">
+            <textarea id="markdownInput" placeholder="Cole seu Markdown aqui ou faça upload de um arquivo .md"></textarea>
+        </div>
+        <div class="preview-area">
+            <div id="preview" class="preview"></div>
+        </div>
+    </div>
+    <div class="controls">
+        <div class="file-upload">
+            <label for="fileInput">Upload .md</label>
+            <input type="file" id="fileInput" accept=".md">
+        </div>
+        <button onclick="openExportModal()" class="export-btn">
+            <i class="fas fa-file-pdf"></i> Exportar para PDF
+        </button>
+    </div>
+
+    <!-- Rodapé do site -->
+    <div class="site-footer">
+        Desenvolvido por: <a href="https://www.linkedin.com/in/mayconmancilha/" target="_blank">Maycon Mancilha</a>
+    </div>
+
+    <!-- Modal de Exportação -->
+    <div id="exportModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeExportModal()">×</span>
+            <h2>Exportar para PDF</h2>
+            <p>Exporta "arquivos .md" para um arquivo PDF de acordo com as configurações abaixo.</p>
+            <label>Tamanho da página</label>
+            <select id="pageSize">
+                <option value="letter">Carta</option>
+                <option value="a4">A4</option>
+            </select>
+            <label>Orientação</label>
+            <select id="orientation">
+                <option value="portrait">Retrato</option>
+                <option value="landscape">Paisagem</option>
+            </select>
+            <label>Margem</label>
+            <select id="margin">
+                <option value="0.5">Padrão</option>
+                <option value="0.2">Pequena</option>
+                <option value="1">Grande</option>
+            </select>
+            <label>Percentagem de redução em escala</label>
+            <div class="toggle">
+                <input type="range" id="scale" min="50" max="100" value="100">
+                <span id="scaleValue">100%</span>
+            </div>
+            <button onclick="exportToPDF()">Exportar para PDF</button>
+        </div>
+    </div>
+
+    <!-- Modal de Informações -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeInfoModal()">×</span>
+            <h2>Sobre o Markdown AI Editor</h2>
+            <p>Transforme seus arquivos Markdown em PDFs de alta qualidade com o Markdown AI Editor! Nosso conversor online gratuito permite que você exporte documentos Markdown para o formato PDF de forma rápida e eficiente, mantendo o conteúdo, a estrutura e o estilo originais.</p>
+            <p>Por que converter Markdown para PDF? O Markdown é um formato leve e versátil, mas precisa ser renderizado para uma visualização final. O PDF é um formato universal que preserva o layout e a integridade do documento em qualquer dispositivo ou sistema operacional, tornando-o ideal para compartilhamento e impressão.</p>
+            <p>Com o Markdown AI Editor, basta colar seu texto Markdown ou fazer upload de um arquivo .md, personalizar as opções de exportação (como tamanho da página, orientação e margens) e clicar em "Exportar para PDF". Em poucos segundos, você terá um arquivo PDF pronto para uso!</p>
+            <p>Desenvolvido com tecnologia de ponta, o Markdown AI Editor garante resultados profissionais com alta velocidade e precisão. Experimente agora e simplifique sua conversão de Markdown para PDF!</p>
+        </div>
+    </div>
+
+    <!-- Bibliotecas -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Partículas de fundo (efeito tech)
+        particlesJS('particles', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: '#00d4ff' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.5, random: true },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: '#00d4ff', opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 2, direction: 'none', random: false, straight: false }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } },
+                modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+            },
+            retina_detect: true
+        });
+
+        // Funções para abrir e fechar o modal de informações
+        function openInfoModal() {
+            document.getElementById('infoModal').style.display = 'flex';
+        }
+
+        function closeInfoModal() {
+            document.getElementById('infoModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
