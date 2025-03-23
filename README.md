@@ -105,7 +105,7 @@ Sinta-se à vontade para contribuir com o projeto! Se tiver sugestões, melhoria
 
 ## 📜 Licença
 
-Este projeto está licenciado sob a **[insira o nome da licença aqui]**.  
+Este projeto está licenciado sob a [MIT License](LICENSE). \
 Sinta-se à vontade para usar, modificar e distribuir o código!
 
 ---
