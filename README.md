@@ -17,6 +17,7 @@
 ## 🎨 Visual
 
 O Markdown to PDF Editor combina funcionalidade com um design futurista:
+
 - **Tema Escuro Tech**: Fundo gradiente com partículas animadas.
 - **Botões Estilizados**: Botões com gradientes ciano-magenta e ícones (upload e exportação).
 - **Modal de Informações**: Clique em "Sobre" para saber mais sobre a ferramenta.
@@ -42,17 +43,6 @@ O Markdown to PDF Editor combina funcionalidade com um design futurista:
 5. **Saiba Mais**:
    - Clique no botão "Sobre" no canto superior direito para aprender mais sobre o Markdown to PDF Editor.
 
-## 📸 Capturas de Tela
-
-*(Adicione capturas de tela do site aqui, se possível. Você pode tirar prints do site e enviá-los para o repositório.)*
-
-- **Página Principal**:
-  ![Página Principal](https://via.placeholder.com/800x400.png?text=Página+Principal) <!-- Substitua por uma imagem real -->
-- **Modal de Exportação**:
-  ![Modal de Exportação](https://via.placeholder.com/800x400.png?text=Modal+de+Exportação) <!-- Substitua por uma imagem real -->
-- **Prévia com Callouts**:
-  ![Prévia com Callouts](https://via.placeholder.com/800x400.png?text=Prévia+com+Callouts) <!-- Substitua por uma imagem real -->
-
 ## 🧑‍💻 Tecnologias Utilizadas
 
 - **HTML, CSS e JavaScript**: Estrutura, estilo e interatividade.
@@ -67,5 +57,61 @@ O Markdown to PDF Editor combina funcionalidade com um design futurista:
 Se você quiser executar o projeto localmente:
 
 1. Clone o repositório:
+
    ```bash
    git clone https://github.com/mmancilha/markdown-ai-editor.git
+   ```
+
+2. Abra o arquivo `index.html` no seu navegador:
+
+   ```bash
+   open index.html
+   ```
+
+   Ou simplesmente arraste o arquivo para o navegador.
+
+> **Nota**: Não é necessário instalar dependências, pois todas as bibliotecas são carregadas via CDN.
+
+---
+
+## 🤝 Contribuições
+
+Sinta-se à vontade para contribuir com o projeto! Se tiver sugestões, melhorias ou correções, abra uma issue ou envie um pull request.
+
+### Passo a passo:
+
+1. Faça um fork do repositório.
+2. Crie uma branch para sua feature:
+
+   ```bash
+   git checkout -b minha-feature
+   ```
+
+3. Faça suas alterações e commit:
+
+   ```bash
+   git commit -m "Adicionando minha feature"
+   ```
+
+4. Envie para o repositório remoto:
+
+   ```bash
+   git push origin minha-feature
+   ```
+
+5. Abra um pull request.
+
+---
+
+## 📜 Licença
+
+Este projeto está licenciado sob a **[insira o nome da licença aqui]**.  
+Sinta-se à vontade para usar, modificar e distribuir o código!
+
+---
+
+## 🌟 Agradecimentos
+
+Desenvolvido por **Maycon Mancilha**.  
+Inspirado em ferramentas de conversão de Markdown e no desejo de criar uma experiência simples e visualmente atraente.  
+Feito com 💜 por Maycon Mancilha.
